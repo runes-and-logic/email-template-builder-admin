@@ -1,3 +1,11 @@
+# Postly Administration
+
+In `NEXT_PUBLIC_APP_MODE=cloud`, this app redirects to `${CUSTOMER_APP_URL}/platform`, which uses the customer frontend's platform UI, backed by email-template-builder-be for sessions, database authorization, and audits. Configure the URL using `.env.example`. The connected administration area exposes actual users, workspaces, subscriptions, plans, template publishing, roles, and audit records according to the operator's role.
+
+Run this frontend alongside the customer app with `npm run dev -- --port 3001`. It remains a Next.js app; no backend logic or provider credentials are stored here.
+
+The original Postcraft admin demo is retained below and remains the default in demo mode. Its campaign, analytics, CMS, and other sample screens are not represented as live services. See the backend repository's `OPERATIONS.md` for provisioning and launch requirements.
+
 # Postcraft Admin
 
 A responsive Email Template Builder SaaS admin **demo**, built with Next.js App Router, React, TypeScript, Tailwind CSS, Lucide, and Recharts.
